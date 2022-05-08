@@ -32,6 +32,14 @@ jobs:
     with:
       terraform-dir: terraform
 
+  # CALL WORKFLOW code scanning snyk & tfsec
+  # code-scanning:
+  #   uses: indigo-tangerine/shared-workflows/.github/workflows/code-scanning.yml@main
+  #   with:
+  #     snyk_file_to_test: terraform/_db.tf
+  #   secrets:
+  #     snyk_token: ${{ secrets.SNYK_TOKEN }}
+
   # CALL WORKFLOW tfm-plan
   tfm-plan:
     uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-plan.yml@main
@@ -45,3 +53,4 @@ jobs:
       aws-secret-access-key: ${{ secrets.CICD_AUTOMATION_AWS_SECRET_ACCESS_KEY }}
       aws-cicd-automation-role-external-id: ${{ secrets.ITC_AWS_IAM_EXTERNAL_ID }}
       aws-cicd-automation-github-role: ${{ secrets.CICD_AUTOMATION_GITHUB_ACTIONS_ROLE }}
+      snyk-token: ${{ secrets.SNYK_TOKEN }}

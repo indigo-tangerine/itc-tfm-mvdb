@@ -32,11 +32,6 @@ variable "service_group" {
   default = "main"
 }
 
-variable "service" {
-  type    = string
-  default = "tfm-project-template"
-}
-
 variable "client" {
   type = string
 }

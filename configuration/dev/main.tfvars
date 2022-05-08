@@ -1,5 +1,5 @@
 # Terraform variables
-stage           = "xxx"
+stage           = "dev"
 service_version = "<service-version>"
 service_group   = "main"
 aws_account_id  = "256645035107"
