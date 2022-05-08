@@ -1,4 +1,8 @@
+
 #tfsec:ignore:aws-dynamodb-enable-recovery tfsec:ignore:aws-dynamodb-enable-at-rest-encryption
+
+
+
 module "dynamodb" {
   source = "./modules/dynamodb"
 
