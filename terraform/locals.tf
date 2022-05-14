@@ -11,4 +11,5 @@ locals {
 
   cicd_automation_role_name = "${var.client}-cicd-automation"
 
+  xray_packages_file_path = "../layer_packages/xray_packages.zip"
 }

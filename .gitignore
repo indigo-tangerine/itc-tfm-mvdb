@@ -34,3 +34,16 @@ scripts/
 terraform/.terraform.lock.hcl
 
 terraform/tfm.plan
+packages/build/
+
+packages/.DS_Store
+
+_archive/
+
+src/mvdb_lambda.py
+
+src/packages/
+
+.DS_Store
+
+layer_packages/build/
