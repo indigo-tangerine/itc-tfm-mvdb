@@ -1,12 +1,15 @@
 name: build-artifacts
 
 on:
-  push:
-    paths:
-      - "src/**"
-      - "layer_packages/**"
-    branches-ignore:
-      - main
+  workflow_call:
+
+# on:
+#   push:
+#     paths:
+#       - "src/**"
+#       - "layer_packages/**"
+#     branches-ignore:
+#       - main
 
 env:
   SRC_DIR: "src"
