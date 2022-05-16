@@ -11,5 +11,7 @@ locals {
 
   cicd_automation_role_name = "${var.client}-cicd-automation"
 
-  xray_packages_file_path = "../layer_packages/xray_packages.zip"
+  xray_packages_zip_file_path = "../artifacts/xray-packages.zip"
+  # xray_packages_zip_file_path = "../artifacts/xray_packages.zip"
+  lambda_src_zip_file_path = "../artifacts/${var.service}.zip"
 }

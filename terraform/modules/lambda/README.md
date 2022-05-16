@@ -41,6 +41,7 @@ No modules.
 | <a name="input_function_name"></a> [function\_name](#input\_function\_name) | A unique name for your Lambda Function | `string` | `""` | no |
 | <a name="input_handler"></a> [handler](#input\_handler) | Lambda Function entrypoint in your code | `string` | `"lambda_handler"` | no |
 | <a name="input_lambda_src_file_name"></a> [lambda\_src\_file\_name](#input\_lambda\_src\_file\_name) | n/a | `string` | `"movies"` | no |
+| <a name="input_lambda_zip_file_path"></a> [lambda\_zip\_file\_path](#input\_lambda\_zip\_file\_path) | n/a | `string` | n/a | yes |
 | <a name="input_package_type"></a> [package\_type](#input\_package\_type) | The Lambda deployment package type. Valid options: Zip or Image | `string` | `"Zip"` | no |
 | <a name="input_role_name"></a> [role\_name](#input\_role\_name) | Name of IAM role to use for Lambda Function | `string` | `null` | no |
 | <a name="input_runtime"></a> [runtime](#input\_runtime) | Lambda Function runtime | `string` | `"python3.8"` | no |

@@ -99,3 +99,6 @@ variable "xray_layer_arn" {
   description = "X-ray lambda layer arn"
 }
 
+variable "lambda_zip_file_path" {
+  type = string
+}
