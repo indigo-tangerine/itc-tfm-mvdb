@@ -63,7 +63,7 @@ def lambda_handler(event, context):
 
     logger.info("Table name: {0}".format(table_name))
     logger.info("Received event: " + json.dumps(event, indent=2))
-    logger.info("#################################################")
+    logger.info("##-FIND-MOVIE-##########################################")
     logger.info("Year to find: {0}".format(year))
     logger.info("Title to find: {0}".format(title))
 

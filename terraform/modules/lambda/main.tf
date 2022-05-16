@@ -1,12 +1,12 @@
 
 resource "aws_lambda_function" "main" {
-  filename      = local.lambda_zip_file_path
+  filename      = var.lambda_zip_file_path
   function_name = var.function_name
   role          = aws_iam_role.lambda_role.arn
-  handler       = "${var.lambda_src_file_name}.${var.handler}"
+  handler       = "${var.function_name}.${var.handler}"
   timeout       = var.timeout
 
-  source_code_hash = filebase64sha256(local.lambda_zip_file_path)
+  source_code_hash = filebase64sha256(var.lambda_zip_file_path)
 
   tracing_config {
     mode = var.tracing_mode

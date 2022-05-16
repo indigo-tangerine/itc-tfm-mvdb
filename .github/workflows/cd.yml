@@ -8,20 +8,30 @@ on:
 env:
   TFM_DIR: "terraform"
   CFG_DIR: "configuration"
+  FUNCTION: "mvdb"
+  LAYERS: "xray"
 
 jobs:
   # CALL WORKFLOW tag-release
   tag-release:
     uses: indigo-tangerine/shared-workflows/.github/workflows/tag-release.yml@main
 
+    # CALL WORKFLOW build artifacts
+  build-artifacts:
+    uses: indigo-tangerine/shared-workflows/.github/workflows/build-lambda-artifacts.yml@main
+    with:
+      lambda-function-name: mvdb
+      lambda-layers: "xray"
+
   # CALL WORKFLOW tfm-plan-apply
   tfm-plan-apply:
-    needs: [tag-release]
-    uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-plan-apply.yml@main
+    needs: [tag-release, build-artifacts]
+    uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-plan-apply-lambda.yml@main
     with:
       configuration-dir: configuration
       terraform-dir: terraform
       aws-region: "eu-west-1"
+      download-artifacts: true
     secrets:
       aws-access-key-id: ${{ secrets.CICD_AUTOMATION_AWS_ACCESS_KEY_ID }}
       aws-secret-access-key: ${{ secrets.CICD_AUTOMATION_AWS_SECRET_ACCESS_KEY }}
