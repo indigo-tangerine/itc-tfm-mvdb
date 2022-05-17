@@ -7,8 +7,18 @@ Changes unreleased.
 ### Feature
 
 - general:
+  - use build workflow ([f514e73](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/f514e7315fca085b3735d1ee000385970f1c436f)) ([#5](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/5))
+  - use build workflow ([2b5a549](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/2b5a5498575d67141742228b21fac8fbbf44f2d4)) ([#5](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/5))
   - DA-2 add lambda ([fed03dd](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/fed03ddefcf0c18dd733744c4ef48396176e5014)) ([#4](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/4))
   - DA-2 add lambda ([520c61c](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/520c61cbdfd49b1a227fe5b9f4183a62139a017d)) ([#4](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/4))
+
+### Bug Fixes
+
+- general:
+  - bump ([6b727d1](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/6b727d1954e863dd5fc9db5b9027958e8de98017)) ([#8](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/8))
+  - bump ([d452a55](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/d452a55e38c28b30900b6ef746fdc0a2d84ba9f5)) ([#6](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/6))
+  - bump ([f2dd650](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/f2dd650c775411dbaaacac499012b99bc4db2fd5)) ([#6](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/6))
+  - fix workflow [skip ci] ([f7f1035](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/f7f1035f0eed22937ca217a1bd48797c0a5ffbb2))
 
 ## [v0.2.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v0.2.0) - 2022-05-08 12:54:56
 
@@ -20,6 +30,22 @@ Changes unreleased.
   - add dynamodb ([018e4b7](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/018e4b790d66c19e26dc9a91f7f075feb1121c0c)) ([#1](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/1))
 
 ## [v0.1.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v0.1.0) - 2022-05-06 19:43:39
+
+*No description*
+
+## [v0.7.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v0.7.0) - 2022-05-17 21:20:52
+
+*No description*
+
+## [v0.6.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v0.6.0) - 2022-05-17 06:52:37
+
+*No description*
+
+## [v0.5.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v0.5.0) - 2022-05-17 06:43:35
+
+*No description*
+
+## [v0.4.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v0.4.0) - 2022-05-16 20:35:28
 
 *No description*
 
