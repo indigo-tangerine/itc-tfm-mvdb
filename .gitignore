@@ -47,3 +47,9 @@ src/packages/
 .DS_Store
 
 layer_packages/build/
+
+artifacts/mvdb.zip
+
+artifacts/xray-packages.zip
+
+layer_packages/xray-packages.zip
