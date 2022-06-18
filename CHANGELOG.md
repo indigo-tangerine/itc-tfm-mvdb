@@ -33,6 +33,14 @@ Changes unreleased.
 
 *No description*
 
+## [v0.9.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v0.9.0) - 2022-06-18 10:21:14
+
+*No description*
+
+## [v0.8.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v0.8.0) - 2022-06-11 18:43:14
+
+*No description*
+
 ## [v0.7.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v0.7.0) - 2022-05-17 21:20:52
 
 *No description*
