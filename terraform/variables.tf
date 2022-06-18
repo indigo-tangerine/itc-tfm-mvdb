@@ -45,3 +45,8 @@ variable "github_actions_session_name" {
   type    = string
   default = "GitHubActions"
 }
+
+variable "root_dns_domain_name" {
+  type    = string
+  default = "indigo-tangerine.nl"
+}

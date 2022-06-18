@@ -13,4 +13,24 @@ locals {
 
   xray_packages_zip_file_path = "../artifacts/xray-packages.zip"
   lambda_src_zip_file_path    = "../artifacts/${var.service}.zip"
+
+  access_log_settings = {
+    requestId = "$context.requestId"
+    identity = {
+      ip     = "$context.identity.sourceIp"
+      caller = "$context.identity.caller"
+      user   = "$context.identity.user"
+    }
+    requestTime      = "$context.requestTime"
+    requestTimeEpoch = "$context.requestTimeEpoch"
+    httpMethod       = "$context.httpMethod"
+    resourcePath     = "$context.resourcePath"
+    status           = "$context.status"
+    protocol         = "$context.protocol"
+    responseLength   = "$context.responseLength"
+  }
+
+  http_api_dns_hostname = "http-api"
+  http_api_dns_name     = "${local.http_api_dns_hostname}.${var.stage}.${var.root_dns_domain_name}"
+  cognito_auth_dns_name = "auth.${var.stage}.${var.root_dns_domain_name}"
 }

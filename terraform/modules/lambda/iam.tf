@@ -27,7 +27,7 @@ data "aws_iam_policy_document" "lambda_policy_doc" {
       "lambda:GetLayerVersion"
     ]
     effect    = "Allow"
-    resources = [var.xray_layer_arn]
+    resources = var.lambda_layer_arns
   }
 
   statement {
