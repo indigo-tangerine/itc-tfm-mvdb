@@ -108,3 +108,21 @@ variable "lambda_layer_arns" {
   description = "Lambda layer arns"
   default     = []
 }
+
+variable "managed_policy_arns" {
+  type        = list(any)
+  description = "Custom IAM policy arns"
+  default     = []
+}
+
+# New Relic
+variable "wrapper_handler" {
+  type    = string
+  default = null
+}
+
+variable "newrelic_account_id" {
+  type    = string
+  default = "3519964"
+}
+

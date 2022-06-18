@@ -22,6 +22,7 @@ No modules.
 | [aws_cloudwatch_log_group.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudwatch_log_group) | resource |
 | [aws_iam_policy.lambda_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
 | [aws_iam_role.lambda_role](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy_attachment.custom_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
 | [aws_iam_role_policy_attachment.lambda_policy_attach](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
 | [aws_iam_role_policy_attachment.managed_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_role_policy_attachment) | resource |
 | [aws_lambda_function.main](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lambda_function) | resource |
@@ -40,8 +41,10 @@ No modules.
 | <a name="input_cloudwatch_logs_retention_in_days"></a> [cloudwatch\_logs\_retention\_in\_days](#input\_cloudwatch\_logs\_retention\_in\_days) | Specifies the number of days you want to retain log events in the specified log group | `number` | `3` | no |
 | <a name="input_function_name"></a> [function\_name](#input\_function\_name) | A unique name for your Lambda Function | `string` | `""` | no |
 | <a name="input_handler"></a> [handler](#input\_handler) | Lambda Function entrypoint in your code | `string` | `"lambda_handler"` | no |
-| <a name="input_lambda_src_file_name"></a> [lambda\_src\_file\_name](#input\_lambda\_src\_file\_name) | n/a | `string` | `"movies"` | no |
+| <a name="input_lambda_layer_arns"></a> [lambda\_layer\_arns](#input\_lambda\_layer\_arns) | Lambda layer arns | `list(any)` | `[]` | no |
 | <a name="input_lambda_zip_file_path"></a> [lambda\_zip\_file\_path](#input\_lambda\_zip\_file\_path) | n/a | `string` | n/a | yes |
+| <a name="input_managed_policy_arns"></a> [managed\_policy\_arns](#input\_managed\_policy\_arns) | Custom IAM policy arns | `list(any)` | `[]` | no |
+| <a name="input_newrelic_account_id"></a> [newrelic\_account\_id](#input\_newrelic\_account\_id) | n/a | `string` | `"3519964"` | no |
 | <a name="input_package_type"></a> [package\_type](#input\_package\_type) | The Lambda deployment package type. Valid options: Zip or Image | `string` | `"Zip"` | no |
 | <a name="input_role_name"></a> [role\_name](#input\_role\_name) | Name of IAM role to use for Lambda Function | `string` | `null` | no |
 | <a name="input_runtime"></a> [runtime](#input\_runtime) | Lambda Function runtime | `string` | `"python3.8"` | no |
@@ -50,11 +53,13 @@ No modules.
 | <a name="input_table_name"></a> [table\_name](#input\_table\_name) | Dynamodb table name | `string` | `null` | no |
 | <a name="input_timeout"></a> [timeout](#input\_timeout) | Amount of time your Lambda Function has to run in seconds | `number` | `15` | no |
 | <a name="input_tracing_mode"></a> [tracing\_mode](#input\_tracing\_mode) | Tracing mode of the Lambda Function. Valid value can be either PassThrough or Active. | `string` | `"Active"` | no |
-| <a name="input_xray_layer_arn"></a> [xray\_layer\_arn](#input\_xray\_layer\_arn) | X-ray lambda layer arn | `string` | n/a | yes |
+| <a name="input_wrapper_handler"></a> [wrapper\_handler](#input\_wrapper\_handler) | New Relic | `string` | `null` | no |
 
 ### Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_arn"></a> [arn](#output\_arn) | n/a |
 
 <!--- END_TF_DOCS --->
 
