@@ -8,4 +8,7 @@ pip3 install -r requirements.txt --no-deps --target "$PY_DIR"
 
 # zip up dependencies
 cd build
-zip -r ../xray_packages.zip .
+zip -r ../xray-packages.zip .
+
+cd ..
+mv -f xray-packages.zip ../artifacts/xray-packages.zip

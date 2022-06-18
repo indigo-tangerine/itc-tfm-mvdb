@@ -15,3 +15,13 @@ variable "runtime" {
   #    error_message = "The runtime value must be one of supported by AWS Lambda."
   #  }
 }
+
+variable "cloudwatch_logs_retention_in_days" {
+  type        = map(any)
+  description = "Specifies the number of days you want to retain log events in the specified log group"
+  default = {
+    dev = 3
+    acc = 10
+    prd = 30
+  }
+}

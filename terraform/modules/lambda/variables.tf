@@ -83,10 +83,10 @@ variable "table_arn" {
   default     = null
 }
 
-variable "lambda_src_file_name" {
-  type    = string
-  default = "movies"
-}
+# variable "lambda_src_file_name" {
+#   type    = string
+#   default = "mvdb"
+# }
 
 variable "timeout" {
   type        = number
@@ -94,11 +94,17 @@ variable "timeout" {
   default     = 15
 }
 
-variable "xray_layer_arn" {
-  type        = string
-  description = "X-ray lambda layer arn"
-}
+# variable "xray_layer_arn" {
+#   type        = string
+#   description = "X-ray lambda layer arn"
+# }
 
 variable "lambda_zip_file_path" {
   type = string
+}
+
+variable "lambda_layer_arns" {
+  type        = list(any)
+  description = "Lambda layer arns"
+  default     = []
 }

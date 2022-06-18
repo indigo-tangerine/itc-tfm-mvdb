@@ -14,3 +14,5 @@ zip -rq ../"$FUNCTION.zip" .
 
 cd ..
 zip -g "$FUNCTION.zip" "$FUNCTION.py"
+
+mv -f "$FUNCTION.zip" "../artifacts/$FUNCTION.zip"

@@ -26,6 +26,7 @@ jobs:
     uses: indigo-tangerine/shared-workflows/.github/workflows/tfm-validate.yml@main
     with:
       terraform-dir: terraform
+      download-artifacts: true
 
   # CALL WORKFLOW tfm-security tfsec scan
   security-scan:

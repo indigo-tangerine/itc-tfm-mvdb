@@ -3,7 +3,7 @@ resource "aws_lambda_function" "main" {
   filename      = var.lambda_zip_file_path
   function_name = var.function_name
   role          = aws_iam_role.lambda_role.arn
-  handler       = "${var.function_name}.${var.handler}"
+  handler       = var.handler
   timeout       = var.timeout
 
   source_code_hash = filebase64sha256(var.lambda_zip_file_path)
@@ -20,7 +20,7 @@ resource "aws_lambda_function" "main" {
   ]
 
   runtime = var.runtime
-  layers  = [var.xray_layer_arn]
+  layers  = var.lambda_layer_arns
 
   environment {
     variables = local.env_vars
