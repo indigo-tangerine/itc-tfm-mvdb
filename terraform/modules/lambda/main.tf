@@ -3,7 +3,7 @@ resource "aws_lambda_function" "main" {
   filename      = var.lambda_zip_file_path
   function_name = var.function_name
   role          = aws_iam_role.lambda_role.arn
-  handler       = var.handler
+  handler       = local.lambda_function_handler
   timeout       = var.timeout
 
   source_code_hash = filebase64sha256(var.lambda_zip_file_path)

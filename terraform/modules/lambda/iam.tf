@@ -65,3 +65,9 @@ resource "aws_iam_role_policy_attachment" "managed_policy_attachment" {
   role       = aws_iam_role.lambda_role.name
   policy_arn = local.managed_policy_arns[count.index]
 }
+
+resource "aws_iam_role_policy_attachment" "custom_policy_attachment" {
+  count      = length(compact(var.managed_policy_arns))
+  role       = aws_iam_role.lambda_role.name
+  policy_arn = var.managed_policy_arns[count.index]
+}
