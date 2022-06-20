@@ -62,7 +62,7 @@
 | <a name="input_github_actions_session_name"></a> [github\_actions\_session\_name](#input\_github\_actions\_session\_name) | n/a | `string` | `"GitHubActions"` | no |
 | <a name="input_github_org"></a> [github\_org](#input\_github\_org) | n/a | `string` | `"indigo-tangerine"` | no |
 | <a name="input_root_dns_domain_name"></a> [root\_dns\_domain\_name](#input\_root\_dns\_domain\_name) | n/a | `string` | `"indigo-tangerine.nl"` | no |
-| <a name="input_runtime"></a> [runtime](#input\_runtime) | Lambda Function runtime | `string` | `"python3.8"` | no |
+| <a name="input_runtime"></a> [runtime](#input\_runtime) | Lambda Function runtime | `string` | `"python3.9"` | no |
 | <a name="input_service"></a> [service](#input\_service) | n/a | `string` | `"mvdb"` | no |
 | <a name="input_service_group"></a> [service\_group](#input\_service\_group) | n/a | `string` | `"main"` | no |
 | <a name="input_service_version"></a> [service\_version](#input\_service\_version) | n/a | `string` | `"0.0.0"` | no |
