@@ -53,7 +53,7 @@ variable "api_protocol_type" {
 
 variable "api_disable_execute_api_endpoint" {
   type        = bool
-  default     = false
+  default     = true
   description = "(Optional) Whether clients can invoke the API by using the default execute-api endpoint"
 }
 

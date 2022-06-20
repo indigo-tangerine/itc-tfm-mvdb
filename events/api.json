@@ -1,0 +1,118 @@
+{
+  "version": "1.0",
+  "resource": "/",
+  "path": "/",
+  "httpMethod": "GET",
+  "headers": {
+    "Content-Length": "0",
+    "Host": "http-api.dev.indigo-tangerine.nl",
+    "Postman-Token": "ac87f4f0-c98c-407b-9a0b-6d45246571a1",
+    "User-Agent": "PostmanRuntime/7.29.0",
+    "X-Amzn-Trace-Id": "Root=1-62af1d9b-41b424be23729fcf5af93be3",
+    "X-Forwarded-For": "92.109.81.211",
+    "X-Forwarded-Port": "443",
+    "X-Forwarded-Proto": "https",
+    "accept": "*/*",
+    "accept-encoding": "gzip, deflate, br",
+    "authorization": "Bearer eyJraWQiOiJJVkUycjY0VGZCRHMrVE5ieHdcL1BPT1pIN2UzUlI0a0EybElHSm82YWpVaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1a252am5kMm9zcjMzNGtkaG5xMmc0ZHQ2ayIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiaXRjLW12ZGJcL20ybSIsImF1dGhfdGltZSI6MTY1NTY0Mjc1NiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmV1LXdlc3QtMS5hbWF6b25hd3MuY29tXC9ldS13ZXN0LTFfcWZOVU9OeExXIiwiZXhwIjoxNjU1NjQ2MzU2LCJpYXQiOjE2NTU2NDI3NTYsInZlcnNpb24iOjIsImp0aSI6ImYxY2RjMDJmLWJjYTAtNDliZS1iN2UwLTQ2MTgwYWI3MDA1NiIsImNsaWVudF9pZCI6IjVrbnZqbmQyb3NyMzM0a2RobnEyZzRkdDZrIn0.QAV8crsaS1z4-Jpea6sktjRUcANlXqCB5Q_iA5oz2erZ80D6c35pI2ELn9WV7o49tYcFzl-pt2JsEVupYzGO7mi3usa-JovxE0118KQYVSvvsBp2l1IYbLtssObUWCZ3HnKaQdugXmSsFERhXWDyX3r22651Gz2qieTtTFlUjfFEtkvq8r1kZgnaTEW9TwbGYxviaXO3A3mg9jOd2m6p8WE6W7RD8rtrkgkDYiWMw6K8udgT2kKzadYneGmDjUCz8kdSEfZVl1wHbtiBjjT5mmGWb1qVWGCtTOfWQGtCDCi53y_4j1NMw884Lv68M97KggEV4IWz-DS1LgMA6rFa0Q"
+  },
+  "multiValueHeaders": {
+    "Content-Length": [
+      "0"
+    ],
+    "Host": [
+      "http-api.dev.indigo-tangerine.nl"
+    ],
+    "Postman-Token": [
+      "ac87f4f0-c98c-407b-9a0b-6d45246571a1"
+    ],
+    "User-Agent": [
+      "PostmanRuntime/7.29.0"
+    ],
+    "X-Amzn-Trace-Id": [
+      "Root=1-62af1d9b-41b424be23729fcf5af93be3"
+    ],
+    "X-Forwarded-For": [
+      "92.109.81.211"
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ],
+    "accept": [
+      "*/*"
+    ],
+    "accept-encoding": [
+      "gzip, deflate, br"
+    ],
+    "authorization": [
+      "Bearer eyJraWQiOiJJVkUycjY0VGZCRHMrVE5ieHdcL1BPT1pIN2UzUlI0a0EybElHSm82YWpVaz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1a252am5kMm9zcjMzNGtkaG5xMmc0ZHQ2ayIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiaXRjLW12ZGJcL20ybSIsImF1dGhfdGltZSI6MTY1NTY0Mjc1NiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmV1LXdlc3QtMS5hbWF6b25hd3MuY29tXC9ldS13ZXN0LTFfcWZOVU9OeExXIiwiZXhwIjoxNjU1NjQ2MzU2LCJpYXQiOjE2NTU2NDI3NTYsInZlcnNpb24iOjIsImp0aSI6ImYxY2RjMDJmLWJjYTAtNDliZS1iN2UwLTQ2MTgwYWI3MDA1NiIsImNsaWVudF9pZCI6IjVrbnZqbmQyb3NyMzM0a2RobnEyZzRkdDZrIn0.QAV8crsaS1z4-Jpea6sktjRUcANlXqCB5Q_iA5oz2erZ80D6c35pI2ELn9WV7o49tYcFzl-pt2JsEVupYzGO7mi3usa-JovxE0118KQYVSvvsBp2l1IYbLtssObUWCZ3HnKaQdugXmSsFERhXWDyX3r22651Gz2qieTtTFlUjfFEtkvq8r1kZgnaTEW9TwbGYxviaXO3A3mg9jOd2m6p8WE6W7RD8rtrkgkDYiWMw6K8udgT2kKzadYneGmDjUCz8kdSEfZVl1wHbtiBjjT5mmGWb1qVWGCtTOfWQGtCDCi53y_4j1NMw884Lv68M97KggEV4IWz-DS1LgMA6rFa0Q"
+    ]
+  },
+  "queryStringParameters": {
+    "title": "Rush",
+    "year": "2013"
+  },
+  "multiValueQueryStringParameters": {
+    "title": [
+      "Rush"
+    ],
+    "year": [
+      "2013"
+    ]
+  },
+  "requestContext": {
+    "accountId": "256645035107",
+    "apiId": "hpud6q9nzf",
+    "authorizer": {
+      "claims": {
+        "auth_time": "1655642756",
+        "client_id": "5knvjnd2osr334kdhnq2g4dt6k",
+        "exp": "1655646356",
+        "iat": "1655642756",
+        "iss": "https://cognito-idp.eu-west-1.amazonaws.com/eu-west-1_qfNUONxLW",
+        "jti": "f1cdc02f-bca0-49be-b7e0-46180ab70056",
+        "scope": "itc-mvdb/m2m",
+        "sub": "5knvjnd2osr334kdhnq2g4dt6k",
+        "token_use": "access",
+        "version": "2"
+      },
+      "scopes": [
+        "itc-mvdb/m2m"
+      ]
+    },
+    "domainName": "http-api.dev.indigo-tangerine.nl",
+    "domainPrefix": "http-api",
+    "extendedRequestId": "T-GQUhqWjoEEJIQ=",
+    "httpMethod": "GET",
+    "identity": {
+      "accessKey": null,
+      "accountId": null,
+      "caller": null,
+      "cognitoAmr": null,
+      "cognitoAuthenticationProvider": null,
+      "cognitoAuthenticationType": null,
+      "cognitoIdentityId": null,
+      "cognitoIdentityPoolId": null,
+      "principalOrgId": null,
+      "sourceIp": "92.109.81.211",
+      "user": null,
+      "userAgent": "PostmanRuntime/7.29.0",
+      "userArn": null
+    },
+    "path": "/",
+    "protocol": "HTTP/1.1",
+    "requestId": "T-GQUhqWjoEEJIQ=",
+    "requestTime": "19/Jun/2022:12:59:07 +0000",
+    "requestTimeEpoch": 1655643547423,
+    "resourceId": "GET /",
+    "resourcePath": "/",
+    "stage": "$default"
+  },
+  "pathParameters": null,
+  "stageVariables": null,
+  "body": null,
+  "isBase64Encoded": false
+}

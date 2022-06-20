@@ -12,6 +12,9 @@ module "http_api_gw" {
     allow_methods = ["*"]
     allow_origins = ["*"]
   }
+  mutual_tls_authentication = {
+    truststore_uri = local.truststore_uri
+  }
 }
 
 locals {
