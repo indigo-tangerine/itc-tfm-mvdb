@@ -35,7 +35,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_api_access_log_arn"></a> [api\_access\_log\_arn](#input\_api\_access\_log\_arn) | API cloudwatch log group arn | `string` | `null` | no |
 | <a name="input_api_description"></a> [api\_description](#input\_api\_description) | (Optional) The description of the API | `string` | `null` | no |
-| <a name="input_api_disable_execute_api_endpoint"></a> [api\_disable\_execute\_api\_endpoint](#input\_api\_disable\_execute\_api\_endpoint) | (Optional) Whether clients can invoke the API by using the default execute-api endpoint | `bool` | `false` | no |
+| <a name="input_api_disable_execute_api_endpoint"></a> [api\_disable\_execute\_api\_endpoint](#input\_api\_disable\_execute\_api\_endpoint) | (Optional) Whether clients can invoke the API by using the default execute-api endpoint | `bool` | `true` | no |
 | <a name="input_api_dns_hostname"></a> [api\_dns\_hostname](#input\_api\_dns\_hostname) | (Option) The dns name of the API | `string` | `"http-api"` | no |
 | <a name="input_api_integrations"></a> [api\_integrations](#input\_api\_integrations) | Map of API integrations to create | `map(any)` | <pre>{<br>  "GET": {<br>    "authorization_scopes": null,<br>    "authorization_type": null,<br>    "authorizer_id": null,<br>    "connection_type": "INTERNET",<br>    "description": null,<br>    "integration_type": "AWS_PROXY",<br>    "payload_format_version": "1.0",<br>    "response_parameters": null,<br>    "timeout_milliseconds": 50,<br>    "tls_config": null,<br>    "uri": null<br>  }<br>}</pre> | no |
 | <a name="input_api_name"></a> [api\_name](#input\_api\_name) | (Required) The name of the API | `string` | n/a | yes |
