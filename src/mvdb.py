@@ -8,7 +8,7 @@ from datetime import datetime
 from botocore.exceptions import ClientError
 from boto3.dynamodb.conditions import Key, Attr
 from aws_xray_sdk.core import xray_recorder, patch_all
-# from newrelic import agent
+from newrelic import agent
 
 # Set some variables
 table_name = os.environ['TABLE_NAME']

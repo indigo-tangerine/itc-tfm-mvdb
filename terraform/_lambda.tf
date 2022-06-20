@@ -8,7 +8,7 @@ module "lambda" {
   runtime       = var.runtime
   lambda_layer_arns = [
     aws_lambda_layer_version.xray.arn,
-    "arn:aws:lambda:${var.aws_region}:451483290750:layer:NewRelicPython38:39"
+    "arn:aws:lambda:${var.aws_region}:451483290750:layer:NewRelicPython39:20"
   ]
   lambda_zip_file_path              = local.lambda_src_zip_file_path
   handler                           = "${var.service}.lambda_handler"
