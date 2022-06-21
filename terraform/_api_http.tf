@@ -20,18 +20,16 @@ module "http_api_gw" {
 locals {
   api_http_integrations = {
     "GET /" = {
-      integration_type                 = "AWS_PROXY"
-      connection_type                  = "INTERNET"
-      uri                              = module.lambda.arn
-      payload_format_version           = "1.0"
-      authorization_scopes             = jsonencode(aws_cognito_resource_server.mvdb.scope_identifiers)
-      authorization_type               = "JWT"
-      authorizer_id                    = aws_apigatewayv2_authorizer.cognito.id
-      tls_config_server_name_to_verify = local.http_api_dns_name
+      integration_type       = "AWS_PROXY"
+      connection_type        = "INTERNET"
+      uri                    = module.lambda.arn
+      payload_format_version = "1.0"
+      authorization_scopes   = jsonencode(aws_cognito_resource_server.mvdb.scope_identifiers)
+      authorization_type     = "JWT"
+      authorizer_id          = aws_apigatewayv2_authorizer.cognito.id
     }
     "$default" = {
-      uri                              = module.lambda.arn
-      tls_config_server_name_to_verify = local.http_api_dns_name
+      uri = module.lambda.arn
       response_parameters = jsonencode([
         {
           status_code = 500

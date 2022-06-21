@@ -2,7 +2,7 @@
 # Install dependencies
 set -eo pipefail
 PY_DIR='packages'
-FUNCTION='movies'
+FUNCTION='mvdb'
 mkdir -p "$PY_DIR"
 
 

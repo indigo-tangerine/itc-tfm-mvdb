@@ -8,7 +8,6 @@ from datetime import datetime
 from botocore.exceptions import ClientError
 from boto3.dynamodb.conditions import Key, Attr
 from aws_xray_sdk.core import xray_recorder, patch_all
-from newrelic import agent
 
 # Set some variables
 table_name = os.environ['TABLE_NAME']
@@ -63,10 +62,10 @@ def lambda_handler(event, context):
     operation = event['httpMethod'].lower()
 
     logger.info("Table name: {0}".format(table_name))
-    logger.info("Received event: " + json.dumps(event, indent=2))
-    logger.info("##-FIND-MOVIE-##########################################")
-    logger.info("Year to find: {0}".format(year))
-    logger.info("Title to find: {0}".format(title))
+    logger.info("Received event: " + jsonpickle.encode(event))
+    logger.info("## FIND MOVIE ##########################################")
+    logger.info("## Year: {0}".format(year))
+    logger.info("## Title: {0}".format(title))
 
     try:
         if operation == 'get':

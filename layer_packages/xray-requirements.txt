@@ -1,4 +1,2 @@
-boto3
-botocore
+aws-xray-sdk==2.4.3
 requests
-aws-xray-sdk

@@ -9,7 +9,8 @@ locals {
     # Enable NR Lambda extension if the telemetry data are ingested via lambda extension
     NEW_RELIC_LAMBDA_EXTENSION_ENABLED = true
     # Enable Distributed tracing for in-depth monitoring of transactions in lambda (Optional)
-    NEW_RELIC_DISTRIBUTED_TRACING_ENABLED = true
+    NEW_RELIC_DISTRIBUTED_TRACING_ENABLED  = true
+    NEW_RELIC_EXTENSION_SEND_FUNCTION_LOGS = true
   }
   managed_policy_arns = ["arn:aws:iam::aws:policy/AWSXrayFullAccess"]
   # lambda_src_file_path = "../${path.root}/src/${var.lambda_src_file_name}.py"
