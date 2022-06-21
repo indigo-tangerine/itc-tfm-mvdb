@@ -13,6 +13,6 @@ module "lambda" {
   lambda_zip_file_path              = local.lambda_src_zip_file_path
   handler                           = "${var.service}.lambda_handler"
   cloudwatch_logs_retention_in_days = var.cloudwatch_logs_retention_in_days[var.stage]
-  managed_policy_arns               = ["arn:aws:iam::${var.aws_account_id}:policy/NewRelic-ViewLicenseKey-eu-west-1"]
+  managed_policy_arns               = ["arn:aws:iam::${var.aws_account_id}:policy/NewRelic-ViewLicenseKey-${var.aws_region}"]
   wrapper_handler                   = "newrelic_lambda_wrapper.handler"
 }

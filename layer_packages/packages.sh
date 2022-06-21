@@ -4,7 +4,7 @@ set -eo pipefail
 PY_DIR='build/python'
 mkdir -p "$PY_DIR"
 
-pip3 install -r requirements.txt --no-deps --target "$PY_DIR"
+pip3 install -r xray-requirements.txt --no-deps --target "$PY_DIR"
 
 # zip up dependencies
 cd build
