@@ -1,25 +1,5 @@
 # CHANGELOG
 
-## Unreleased
-
-Changes unreleased.
-
-### Feature
-
-- general:
-  - use build workflow ([f514e73](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/f514e7315fca085b3735d1ee000385970f1c436f)) ([#5](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/5))
-  - use build workflow ([2b5a549](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/2b5a5498575d67141742228b21fac8fbbf44f2d4)) ([#5](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/5))
-  - DA-2 add lambda ([fed03dd](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/fed03ddefcf0c18dd733744c4ef48396176e5014)) ([#4](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/4))
-  - DA-2 add lambda ([520c61c](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/520c61cbdfd49b1a227fe5b9f4183a62139a017d)) ([#4](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/4))
-
-### Bug Fixes
-
-- general:
-  - bump ([6b727d1](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/6b727d1954e863dd5fc9db5b9027958e8de98017)) ([#8](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/8))
-  - bump ([d452a55](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/d452a55e38c28b30900b6ef746fdc0a2d84ba9f5)) ([#6](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/6))
-  - bump ([f2dd650](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/f2dd650c775411dbaaacac499012b99bc4db2fd5)) ([#6](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/6))
-  - fix workflow [skip ci] ([f7f1035](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/f7f1035f0eed22937ca217a1bd48797c0a5ffbb2))
-
 ## [v0.2.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v0.2.0) - 2022-05-08 12:54:56
 
 *No description*
@@ -32,6 +12,15 @@ Changes unreleased.
 ## [v0.1.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v0.1.0) - 2022-05-06 19:43:39
 
 *No description*
+
+## [v1.6.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v1.6.0) - 2022-09-02 18:47:28
+
+*No description*
+
+### Feature
+
+- general:
+  - feat md-8 move api-gw a/c log role ([6f005d1](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/6f005d1a1d91a0f27596293db212b11c43242f3d)) ([#18](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/18))
 
 ## [v1.5.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v1.5.0) - 2022-06-21 14:06:10
 
