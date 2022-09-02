@@ -10,7 +10,7 @@ data "aws_iam_policy_document" "lambda_assume_role_policy" {
     }
   }
 }
-
+#tfsec:ignore:aws-iam-no-policy-wildcards
 data "aws_iam_policy_document" "lambda_policy_doc" {
   statement {
     actions = [
