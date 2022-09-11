@@ -22,6 +22,9 @@ logging.basicConfig(
         force=True,
     )
 
+# Setup logging
+logger = logging.getLogger()
+
 # Set some variables
 table_name = os.environ['TABLE_NAME']
 dynamodb = boto3.resource('dynamodb')
@@ -35,9 +38,7 @@ patch_all()
 # Configure X-ray
 xray_recorder.configure(context_missing='LOG_ERROR', service='movie_db')
 
-# Setup logging
-logger = logging.getLogger()
-# logger.setLevel(logging.INFO)
+
 
 # Helper class to convert a DynamoDB item to JSON
 class DecimalEncoder(json.JSONEncoder):
