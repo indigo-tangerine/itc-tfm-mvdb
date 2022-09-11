@@ -126,3 +126,8 @@ variable "newrelic_account_id" {
   default = "3519964"
 }
 
+variable "honeycomb_apikey" {
+  type      = string
+  default   = null
+  sensitive = true
+}

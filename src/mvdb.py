@@ -4,10 +4,23 @@ import logging
 import json
 import jsonpickle
 import decimal
+import sys
 from datetime import datetime
 from botocore.exceptions import ClientError
 from boto3.dynamodb.conditions import Key, Attr
 from aws_xray_sdk.core import xray_recorder, patch_all
+
+# structured logging
+import structlog
+structlog.configure(processors=[structlog.processors.JSONRenderer()])
+log = structlog.get_logger()
+
+logging.basicConfig(
+        format="%(message)s",
+        stream=sys.stdout,
+        level=logging.INFO,
+        force=True,
+    )
 
 # Set some variables
 table_name = os.environ['TABLE_NAME']
@@ -26,6 +39,7 @@ xray_recorder.configure(context_missing='LOG_ERROR', service='movie_db')
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
+
 # Helper class to convert a DynamoDB item to JSON
 
 
@@ -39,13 +53,24 @@ class DecimalEncoder(json.JSONEncoder):
         return super(DecimalEncoder, self).default(o)
 
 
-def get_movie(year, title):
+def get_movie(year, title, event):
+    structlog.contextvars.clear_contextvars()
+    structlog.contextvars.bind_contextvars(
+        view=event.path,
+        request_id=str(event.aws_request_id),
+        route=event.http_method,
+    )
+    # End of belongs-to-middleware.
+
+    log = logger.bind()
+
+
     try:
         xray_recorder.begin_subsegment('dynamo_get_item')
         result = table.query(KeyConditionExpression=Key('year').eq(
             year) & Key('title').eq(title)
         )
-        logger.info(result)
+        # logger.info(result)
         return {
             "statusCode": 200,
             "headers": {"Content-Type": "application/json"},
@@ -54,24 +79,39 @@ def get_movie(year, title):
     finally:
         xray_recorder.end_subsegment()
 
+def add_movie(context):
+
+  return {
+    "statusCode": 600,
+    "headers": {"Content-Type": "application/json"},
+    "body": {"Error": "Feature not yet implemented"}
+  }
 
 def lambda_handler(event, context):
+
+    start_time = datetime.datetime.now()
+
+    log.info("STARTED", start_time, event)
 
     year = int(event['queryStringParameters']['year'])
     title = event['queryStringParameters']['title']
     operation = event['httpMethod'].lower()
 
-    logger.info("Table name: {0}".format(table_name))
-    logger.info("Received event: " + jsonpickle.encode(event))
-    logger.info("## FIND MOVIE ##########################################")
-    logger.info("## Year: {0}".format(year))
-    logger.info("## Title: {0}".format(title))
+    # logger.info("Table name: {0}".format(table_name))
+    # logger.info("Received event: " + jsonpickle.encode(event))
+    # logger.info("## FIND MOVIE ##########################################")
+    # logger.info("## Year: {0}".format(year))
+    # logger.info("## Title: {0}".format(title))
 
+    log.msg(
+      "Find movie", year, title, operation
+      )
+    
     try:
         if operation == 'get':
-            return get_movie(year, title)
+            return get_movie(year, title, event)
         elif operation == 'put':
-            return print("Not yet implemented")
+            return add_movie(event)
 
     except ClientError as e:
         logger.error(e.response['Error']['Message'])
@@ -79,3 +119,6 @@ def lambda_handler(event, context):
                     jsonpickle.encode(dict(**os.environ)))
         logger.info('## EVENT\r' + jsonpickle.encode(event))
         logger.info('## CONTEXT\r' + jsonpickle.encode(context))
+        log.error(e.response['Error']['Message'])
+    
+    
