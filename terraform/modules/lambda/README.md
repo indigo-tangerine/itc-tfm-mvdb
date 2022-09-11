@@ -41,6 +41,7 @@ No modules.
 | <a name="input_cloudwatch_logs_retention_in_days"></a> [cloudwatch\_logs\_retention\_in\_days](#input\_cloudwatch\_logs\_retention\_in\_days) | Specifies the number of days you want to retain log events in the specified log group | `number` | `3` | no |
 | <a name="input_function_name"></a> [function\_name](#input\_function\_name) | A unique name for your Lambda Function | `string` | `""` | no |
 | <a name="input_handler"></a> [handler](#input\_handler) | Lambda Function entrypoint in your code | `string` | `"lambda_handler"` | no |
+| <a name="input_honeycomb_apikey"></a> [honeycomb\_apikey](#input\_honeycomb\_apikey) | n/a | `string` | `null` | no |
 | <a name="input_lambda_layer_arns"></a> [lambda\_layer\_arns](#input\_lambda\_layer\_arns) | Lambda layer arns | `list(any)` | `[]` | no |
 | <a name="input_lambda_zip_file_path"></a> [lambda\_zip\_file\_path](#input\_lambda\_zip\_file\_path) | n/a | `string` | n/a | yes |
 | <a name="input_managed_policy_arns"></a> [managed\_policy\_arns](#input\_managed\_policy\_arns) | Custom IAM policy arns | `list(any)` | `[]` | no |
