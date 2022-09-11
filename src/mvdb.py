@@ -91,12 +91,9 @@ def lambda_handler(event, context):
     logger.info("Received event: " + jsonpickle.encode(event))
     # log.info("Received event: ", jsonpickle.encode(event))
 
-    # year = int(event['queryStringParameters']['year'])
-    year = int(event.queryStringParameters.year)
-    # title = event['queryStringParameters']['title']
-    title = event.queryStringParameters.title
-    # operation = event['httpMethod'].lower()
-    operation = event.httpMethod.lower()
+    year = int(event['queryStringParameters']['year'])
+    title = event['queryStringParameters']['title']
+    operation = event['httpMethod'].lower()
 
     logger.info("Table name: {0}".format(table_name))
     logger.info("Received event: " + jsonpickle.encode(event))
