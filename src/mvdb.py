@@ -88,7 +88,8 @@ def lambda_handler(event, context):
 
     start_time = datetime.datetime.now()
 
-    log.info("EVENT", event)
+    logger.info("Received event: " + jsonpickle.encode(event))
+    log.info(event)
 
     year = int(event['queryStringParameters']['year'])
     title = event['queryStringParameters']['title']
