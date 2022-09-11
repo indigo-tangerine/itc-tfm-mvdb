@@ -18,7 +18,6 @@ module "lambda" {
   honeycomb_apikey                  = local.honeycomb_apikey
 }
 
-
 locals {
   apm              = "newrelic" # "honeycomb"
   apm_lambda_layer = local.apm == "newrelic" ? "arn:aws:lambda:${var.aws_region}:451483290750:layer:NewRelicPython39:20" : "arn:aws:lambda:${var.aws_region}:702835727665:layer:honeycomb-lambda-extension-x86_64:10"
