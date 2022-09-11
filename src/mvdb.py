@@ -107,10 +107,6 @@ def lambda_handler(event, context):
       "Year", year,
       "Title", title
       )
-
-    # log.msg(
-    #   "Find movie", year, title, operation
-    #   )
     
     try:
         if operation == 'get':
