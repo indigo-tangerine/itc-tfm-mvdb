@@ -13,6 +13,24 @@
 
 *No description*
 
+## [v1.9.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v1.9.0) - 2022-09-11 12:10:51
+
+*No description*
+
+### Bug Fixes
+
+- general:
+  - fix bump ([f9bb247](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/f9bb24724037435ca9b5d9fdc140f37619aa8ca1)) ([#21](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/21))
+
+## [v1.8.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v1.8.0) - 2022-09-11 08:31:52
+
+*No description*
+
+### Bug Fixes
+
+- general:
+  - fix itc-19 add module to requirements ([daf08fb](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/daf08fbaf20575ecf89a291f3b0f27f07ad724ec)) ([#20](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/20))
+
 ## [v1.7.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v1.7.0) - 2022-09-11 08:21:33
 
 *No description*
