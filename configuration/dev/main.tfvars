@@ -7,3 +7,4 @@ aws_region      = "eu-west-1"
 client          = "itc"
 
 # Do not change "<service-version>" - this will be replaced during deployment with the correct value
+#
