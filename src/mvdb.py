@@ -37,12 +37,9 @@ xray_recorder.configure(context_missing='LOG_ERROR', service='movie_db')
 
 # Setup logging
 logger = logging.getLogger()
-logger.setLevel(logging.INFO)
-
+# logger.setLevel(logging.INFO)
 
 # Helper class to convert a DynamoDB item to JSON
-
-
 class DecimalEncoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, decimal.Decimal):
@@ -109,9 +106,9 @@ def lambda_handler(event, context):
       "Title", title
       )
 
-    log.msg(
-      "Find movie", year, title, operation
-      )
+    # log.msg(
+    #   "Find movie", year, title, operation
+    #   )
     
     try:
         if operation == 'get':
