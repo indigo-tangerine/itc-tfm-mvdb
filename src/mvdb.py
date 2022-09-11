@@ -104,7 +104,7 @@ def lambda_handler(event, context):
     # logger.info("## Year: {0}".format(year))
     # logger.info("## Title: {0}".format(title))
 
-    log.info(
+    log.msg(
       "STARTED", start_time,
       "Event", jsonpickle.encode(event) ,
       "TableName", table_name,
