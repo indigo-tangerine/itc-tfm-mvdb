@@ -5,7 +5,7 @@ import json
 import jsonpickle
 import decimal
 import sys
-from datetime import datetime
+import datetime
 from botocore.exceptions import ClientError
 from boto3.dynamodb.conditions import Key, Attr
 from aws_xray_sdk.core import xray_recorder, patch_all
