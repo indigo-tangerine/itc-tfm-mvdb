@@ -13,6 +13,24 @@
 
 *No description*
 
+## [v1.11.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v1.11.0) - 2022-09-11 15:21:27
+
+*No description*
+
+### Bug Fixes
+
+- general:
+  - fix bump ([ae3829a](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/ae3829a599279f3120f2e1cab8ecf8dbe4ba93d5)) ([#23](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/23))
+
+## [v1.10.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v1.10.0) - 2022-09-11 15:13:22
+
+*No description*
+
+### Bug Fixes
+
+- general:
+  - fix mvdb.py datetime ([0581d7f](https://github.com/indigo-tangerine/itc-tfm-mvdb/commit/0581d7f512aca3f6a2ce73280e454c75b10e76ba)) ([#22](https://github.com/indigo-tangerine/itc-tfm-mvdb/pull/22))
+
 ## [v1.9.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v1.9.0) - 2022-09-11 12:10:51
 
 *No description*
