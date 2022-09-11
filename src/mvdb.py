@@ -91,14 +91,6 @@ def lambda_handler(event, context):
 
     start_time = datetime.datetime.now()
 
-    log.msg(
-      "STARTED", start_time,
-      "Event", event ,
-      "TableName", table_name,
-      "Year", year,
-      "Title", title
-      )
-
     year = int(event['queryStringParameters']['year'])
     title = event['queryStringParameters']['title']
     operation = event['httpMethod'].lower()
