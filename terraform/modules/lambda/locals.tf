@@ -11,6 +11,9 @@ locals {
     # Enable Distributed tracing for in-depth monitoring of transactions in lambda (Optional)
     NEW_RELIC_DISTRIBUTED_TRACING_ENABLED  = true
     NEW_RELIC_EXTENSION_SEND_FUNCTION_LOGS = true
+    # Enable honemcomb monitoring
+    LIBHONEY_DATASET = var.function_name
+    LIBHONEY_API_KEY = var.honeycomb_apikey
   }
   managed_policy_arns = ["arn:aws:iam::aws:policy/AWSXrayFullAccess"]
   # lambda_src_file_path = "../${path.root}/src/${var.lambda_src_file_name}.py"
@@ -21,5 +24,3 @@ locals {
   lambda_function_handler = var.wrapper_handler != null ? var.wrapper_handler : var.handler
 
 }
-
-

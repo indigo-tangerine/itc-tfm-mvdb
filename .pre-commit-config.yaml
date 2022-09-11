@@ -30,3 +30,8 @@ repos:
     hooks:
       - id: check-merge-conflict
       - id: end-of-file-fixer
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.18.2
+    hooks:
+      - id: check-github-workflows
+      - id: check-github-actions
