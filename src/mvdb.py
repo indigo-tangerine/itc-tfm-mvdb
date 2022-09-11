@@ -89,7 +89,7 @@ def lambda_handler(event, context):
     start_time = datetime.datetime.now()
 
     logger.info("Received event: " + jsonpickle.encode(event))
-    log.info("Received event: ", jsonpickle.encode(event))
+    # log.info("Received event: ", jsonpickle.encode(event))
 
     # year = int(event['queryStringParameters']['year'])
     year = int(event.queryStringParameters.year)
@@ -98,19 +98,19 @@ def lambda_handler(event, context):
     # operation = event['httpMethod'].lower()
     operation = event.httpMethod.lower()
 
-    # logger.info("Table name: {0}".format(table_name))
-    # logger.info("Received event: " + jsonpickle.encode(event))
-    # logger.info("## FIND MOVIE ##########################################")
-    # logger.info("## Year: {0}".format(year))
-    # logger.info("## Title: {0}".format(title))
+    logger.info("Table name: {0}".format(table_name))
+    logger.info("Received event: " + jsonpickle.encode(event))
+    logger.info("## FIND MOVIE ##########################################")
+    logger.info("## Year: {0}".format(year))
+    logger.info("## Title: {0}".format(title))
 
-    log.msg(
-      "STARTED", start_time,
-      "Event", jsonpickle.encode(event) ,
-      "TableName", table_name,
-      "Year", year,
-      "Title", title
-      )
+    # log.msg(
+    #   "STARTED", start_time,
+    #   "Event", jsonpickle.encode(event) ,
+    #   "TableName", table_name,
+    #   "Year", year,
+    #   "Title", title
+    #   )
     
     try:
         if operation == 'get':
@@ -125,7 +125,7 @@ def lambda_handler(event, context):
                     jsonpickle.encode(dict(**os.environ)))
         logger.info('## EVENT\r' + jsonpickle.encode(event))
         logger.info('## CONTEXT\r' + jsonpickle.encode(context))
-        log.error(e.response['Error']['Message'])
+        # log.error(e.response['Error']['Message'])
     
     return response
     
