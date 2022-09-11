@@ -13,6 +13,10 @@
 
 *No description*
 
+## [v1.30.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v1.30.0) - 2022-09-11 19:13:32
+
+*No description*
+
 ## [v1.29.0](https://github.com/indigo-tangerine/itc-tfm-mvdb/releases/tag/v1.29.0) - 2022-09-11 19:07:10
 
 *No description*
