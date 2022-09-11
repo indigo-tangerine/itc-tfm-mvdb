@@ -88,7 +88,7 @@ def lambda_handler(event, context):
 
     start_time = datetime.datetime.now()
 
-    log.msg("EVENT", event)
+    log.info("EVENT", event)
 
     year = int(event['queryStringParameters']['year'])
     title = event['queryStringParameters']['title']
@@ -100,7 +100,7 @@ def lambda_handler(event, context):
     # logger.info("## Year: {0}".format(year))
     # logger.info("## Title: {0}".format(title))
 
-    log.msg(
+    log.info(
       "STARTED", start_time,
       "Event", event ,
       "TableName", table_name,
