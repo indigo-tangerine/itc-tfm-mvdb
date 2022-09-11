@@ -61,7 +61,6 @@ def get_movie(year, title, event):
 
     log = logger.bind()
 
-
     try:
         xray_recorder.begin_subsegment('dynamo_get_item')
         result = table.query(KeyConditionExpression=Key('year').eq(
