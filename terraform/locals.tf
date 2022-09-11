@@ -31,5 +31,5 @@ locals {
   http_api_dns_hostname = "${var.service}-http-api"
   http_api_dns_name     = "${local.http_api_dns_hostname}.${var.stage}.${var.root_dns_domain_name}"
   cognito_auth_dns_name = "auth.${var.stage}.${var.root_dns_domain_name}"
-  #
+  ##
 }
