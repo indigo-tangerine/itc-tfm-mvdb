@@ -91,7 +91,13 @@ def lambda_handler(event, context):
 
     start_time = datetime.datetime.now()
 
-    log.info("STARTED", start_time, event)
+    log.msg(
+      "STARTED", start_time,
+      "Event", event ,
+      "TableName", table_name,
+      "Year", year,
+      "Title", title
+      )
 
     year = int(event['queryStringParameters']['year'])
     title = event['queryStringParameters']['title']
@@ -104,15 +110,24 @@ def lambda_handler(event, context):
     # logger.info("## Title: {0}".format(title))
 
     log.msg(
+      "STARTED", start_time,
+      "Event", event ,
+      "TableName", table_name,
+      "Year", year,
+      "Title", title
+      )
+
+    log.msg(
       "Find movie", year, title, operation
       )
     
     try:
         if operation == 'get':
-            return get_movie(year, title, event)
+            response = get_movie(year, title, event)
+            
         elif operation == 'put':
-            return add_movie(event)
-
+            response = get_movie(event)
+    
     except ClientError as e:
         logger.error(e.response['Error']['Message'])
         logger.info('## ENVIRONMENT VARIABLES\r' +
@@ -121,4 +136,5 @@ def lambda_handler(event, context):
         logger.info('## CONTEXT\r' + jsonpickle.encode(context))
         log.error(e.response['Error']['Message'])
     
+    return response
     
