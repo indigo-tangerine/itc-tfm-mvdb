@@ -52,12 +52,12 @@ class DecimalEncoder(json.JSONEncoder):
 
 
 def get_movie(year, title, event):
-    structlog.contextvars.clear_contextvars()
-    structlog.contextvars.bind_contextvars(
-        view=event["path"],
-        request_id=str(event["aws_request_id"]),
-        route=event["http_method"],
-    )
+    # structlog.contextvars.clear_contextvars()
+    # structlog.contextvars.bind_contextvars(
+    #     view=event["path"],
+    #     request_id=str(event["aws_request_id"]),
+    #     route=event["http_method"],
+    # )
     # End of belongs-to-middleware.
 
     log = logger.bind()
